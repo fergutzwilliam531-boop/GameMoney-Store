@@ -1,2 +1,58 @@
 # GameMoney-Store
 GameMoney Store - Loja online de produtos e conteúdos para jogos.
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GameMoney Store</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#090719;color:white;font-family:Arial}
+header{text-align:center;padding:25px;background:#17102f;border-bottom:2px solid #a020f0}
+h1{color:#b45cff}
+h1 span{color:#26d9ff}
+.hero{text-align:center;padding:30px 15px}
+.hero p{color:#26d9ff}
+.products{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:15px}
+.product{background:#19132f;border:1px solid #873bff;border-radius:15px;padding:15px;text-align:center}
+.emoji{font-size:40px}
+.price{color:#40eaff}
+button{background:linear-gradient(90deg,#8a2be2,#087cff);color:white;border:0;padding:12px;border-radius:9px;font-weight:bold}
+.cart{text-align:center;padding:20px}
+footer{text-align:center;padding:20px;color:#aaa}
+</style>
+</head>
+<body>
+<header>
+<h1>GAME<span>MONEY</span> STORE</h1>
+<p>SUA LOJA GAMER 💜</p>
+</header>
+<section class="hero">
+<h2>SEU MUNDO GAMER COMEÇA AQUI!</h2>
+<p>Encontre seus produtos favoritos!</p>
+</section>
+<h2 style="text-align:center">🔥 NOSSOS PRODUTOS</h2>
+<section class="products">
+<div class="product"><div class="emoji">💎</div><h3>Free Fire</h3><p class="price">Consulte o preço</p><button onclick="add('Free Fire')">Adicionar</button></div>
+<div class="product"><div class="emoji">🎁</div><h3>Gift Cards</h3><p class="price">Consulte o preço</p><button onclick="add('Gift Cards')">Adicionar</button></div>
+<div class="product"><div class="emoji">🧱</div><h3>Minecraft</h3><p class="price">Consulte o preço</p><button onclick="add('Minecraft')">Adicionar</button></div>
+<div class="product"><div class="emoji">🎯</div><h3>Roblox</h3><p class="price">Consulte o preço</p><button onclick="add('Roblox')">Adicionar</button></div>
+<div class="product"><div class="emoji">⚔️</div><h3>Fortnite</h3><p class="price">Consulte o preço</p><button onclick="add('Fortnite')">Adicionar</button></div>
+<div class="product"><div class="emoji">🚗</div><h3>GTA</h3><p class="price">Consulte o preço</p><button onclick="add('GTA')">Adicionar</button></div>
+</section>
+<section class="cart">
+<h2>🛒 Meu carrinho</h2>
+<p id="cart">Nenhum produto adicionado</p>
+</section>
+<footer>GAME MONEY STORE © 2026</footer>
+<script>
+let items=[];
+function add(name){
+items.push(name);
+document.getElementById('cart').innerText=items.join(', ');
+}
+</script>
+</body>
+</html>
